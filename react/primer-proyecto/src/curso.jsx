@@ -1,8 +1,8 @@
 import React from "react";
-const persona = {"nombre": "Ulises"}
-const curso = {"precio": "$ 1,000 MXN"}
+// const persona = {"nombre": "Ulises"}
+// const curso = {"precio": "$ 1,000 MXN"}
 
-const Curso = () => (
+const Curso = props => (
     <>
 <article class="card">
   <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -24,7 +24,7 @@ const Curso = () => (
       <div class="card__teacher s-cross-center">
         <div class="card__avatar s-mr-1">
           <div class="circle img-container">
-            <img src="https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png" alt=""/>
+            {/* <img src="https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png" alt=""/> */}
           </div>
         </div>
         <span class="small">Alexys Lozada</span>
@@ -32,14 +32,14 @@ const Curso = () => (
       <div class="card__teacher s-cross-center">
         <div class="card__avatar s-mr-1">
           <div class="circle img-container">
-            <img src="https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png" alt=""/>
+            {/* <img width="10px" src="https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png" alt=""/> */}
           </div>
         </div>
-        <span class="small">{persona.nombre}</span>
+        <span class="small">{props.nombre}</span>
       </div>
     </div>
     <div class="s-main-center">
-      <a class="button--ghost-alert button--tiny" href="https://www.google.com">{curso.precio}</a>
+      <a class="button--ghost-alert button--tiny" href="https://www.google.com">{props.precio}</a>
     </div>
   </div>
 </article>
