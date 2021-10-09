@@ -1,7 +1,7 @@
 // import React, {Fragment} from "react";
 import "./styles/style.scss"
-import Curso from './curso'
-import Banner from './Banner';
+import Curso from './Curso'
+import Banner from './Banner'
 const App = () => 
 <>
 
@@ -12,16 +12,18 @@ const App = () =>
 <Curso
 nombre = "Curso Desarrollo Web Desde Cero"
 curso = "Programacion"
-persona = "Benito Samuel"
-precio = "$ 1500 MXN"
+profesor = "Benito Samuel"
+price = "$ 1500 MXN"
 />
 
 <Curso
 nombre = "Curso Desarrollo Java Desde Cero"
 curso = "Programacion"
-persona = "Ulises"
-precio = "$ 1000 MXN"
+profesor = "Ulises"
+price = "$ 1000 MXN"
 />
+<Curso/>
+
 </div>
 
 

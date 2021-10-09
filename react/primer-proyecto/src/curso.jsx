@@ -1,8 +1,11 @@
+
 import React from "react";
+import PropTypes from 'prop-types';
+
 // const persona = {"nombre": "Ulises"}
 // const curso = {"precio": "$ 1,000 MXN"}
 
-const Curso = props => (
+const Curso = ({nombre, image, price, profesor}) => (
     <>
 <article class="card">
   <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -35,16 +38,28 @@ const Curso = props => (
             {/* <img width="10px" src="https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png" alt=""/> */}
           </div>
         </div>
-        <span class="small">{props.nombre}</span>
+        <span class="small">{nombre}</span>
       </div>
     </div>
     <div class="s-main-center">
-      <a class="button--ghost-alert button--tiny" href="https://www.google.com">{props.precio}</a>
+      <a class="button--ghost-alert button--tiny" href="https://www.google.com">{price}</a>
     </div>
   </div>
 </article>
 </>
 
 )
+
+Curso.propTypes = {
+    nombre: PropTypes.string, 
+    image: PropTypes.string,
+    price: PropTypes.string
+}
+
+Curso.defaultProps = {
+    nombre: "No se encontro título",
+    image: "http://www.solofondos.com/wp-content/uploads/2016/08/902946.png",
+    price: "--"
+}
 
 export default Curso;
