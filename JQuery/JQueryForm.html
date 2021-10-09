@@ -57,46 +57,62 @@
 
         <script type="text/javascript">
 
-            function isEmail(email) {
-                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                return regex.test(mail);
-            }
+        console.log("Entrando a Script");
+
+             function isEmail(email) {
+                 console.log("Se valida Email");
+                 var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                 console.log("Resultado analisis: " + regex.test(email));
+                 return regex.test(email);
+             }
 
 
 
             $("#botonEnviar").click(function () {
+                console.log("Click en boton");
+
                 var campoVacio = "";
                 var mensajeError = "";
 
                 //validacion de campos no vacios
                 if ($("#user").val() == "") {
+                    console.log("Usuario Vacio");
                     campoVacio = campoVacio + "User<br>";
+                }else{
+                    console.log("Se carga usuario: " + $("#user").val());
                 }
 
-                //validacion del email
-                if (isEmail($("#email").var()) == false) {
-                    mensajeError = mensajeError + "El formato del Email es incorrecto <br>";
-                }
+                // //validacion del email
+                 if (isEmail($("#email")) == false) {
+                     console.log("No es un email correcto");
+                     mensajeError = mensajeError + "El formato del Email es incorrecto <br>";
+                 }
 
                 if ($("#email").val() == "") {
+                    console.log("Email Vacio");
                     campoVacio = campoVacio + "Email <br>";
+                }else{
+                    console.log("Se carga email: " + $("#email").val());
                 }
 
                 if ($("#tel").val() == "") {
+                    console.log("Tel Vacio");
                     campoVacio = campoVacio + "Telefono <br>";
+                }else{
+                    console.log("Se carga tel: " + $("#tel").val());
                 }
 
-                if ($("#password".val() == "")) {
+                if ($("#password").val() == "") {
                     campoVacio = campoVacio + "Password <br>";
                 }
 
 
-                if ($("#passwordConf".val() == "")) {
+                if ($("#passwordConf").val() == "") {
                     campoVacio = campoVacio + "Password Conf <br>";
                 }
 
                 //Validacion password
-                if ($("#password".val() != $("#passwordConf").val())) {
+                if ($("#password").val() != $("#passwordConf").val()) {
                     mensajeError = mensajeError + "Las contraseñas no coindicen <br>";
                 }
 
