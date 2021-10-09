@@ -30,8 +30,9 @@ body{
 }
 
 #menu{
-    background: rgb(213, 196, 221);
+    background: #29416D;
     padding: 15px;
+    
 }
 
 #menu li{
@@ -39,6 +40,7 @@ body{
     list-style: none;
     padding: 5px;
     font: bold 14px verdana;
+    color: white;
 }
 
 #section{
@@ -75,4 +77,8 @@ article footer{
 
 time{
     color: #999999;
+}
+
+.logo{
+    align-items: center;
 }

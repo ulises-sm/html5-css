@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomt</title>
+</head>
+
+<body>
+    <h2>Ingresa un numero del 1 al 5</h2>
+    <input id="ingresaDato" type="text" placeholder="ingresa un numero" >
+    <button id="comprobarDatos">Click aqui</button>
+    <script type="text/javascript">
+        document.getElementById("comprobarDatos").onclick = function(){
+
+            var rand = Math.floor(Math.random() * (5 -1)) +1;
+            var num = document.getElementById("ingresaDato").value;
+            var conv = Number.parseInt(num);
+
+            if( rand == conv){
+                alert("Genial");
+            }else{
+                alert("Intenta otra vez");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

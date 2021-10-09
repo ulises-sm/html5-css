@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='jquerycss.css' type='text/css'>
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Styles Query</title>
+</head>
+
+<body>
+    <div id="circulo"></div>
+
+    <script type="text/javascript">
+        // $("#circulo").click(function(){
+        //     $("#circulo").css("background-color", "yellow");
+        // })
+
+        $("#circulo").click(function () {
+            $("#circulo").css("height", "300px");
+            $("#circulo").css("width", "300px");
+        })
+
+    </script>
+
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+
+    <script type="text/javascript">
+
+        $('div').click(function () {
+            $(this).fadeOut("slow");
+        })
+
+        // $('div.cuadrado').click(function(){
+        //     $('div.cuadrado').fadeOut("slow");
+        // })
+
+        // $('div.cuadrado').click(function(){
+        //     $('div.cuadrado').css("display", "none");
+        // })
+
+
+        // $('div').click(function(){
+        //     $(this).css("display", "none");
+        // })
+    </script>
+
+    <hr>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et cum ullam minima, voluptates suscipit ad.
+        Sequi, libero. Commodi laudantium placeat, hic harum aspernatur consectetur vel totam! Quo, atque similique?</p>
+    <button id="fadeOut">Ocultar Texto</button>
+    <button id="fadeIn">Mostrar Texto</button>
+    <script type="text/javascript">
+
+        $('#fadeOut').click(function () {
+            $('p').fadeOut("slow");
+        })
+
+        $('#fadeIn').click(function () {
+            $('p').fadeIn("slow");
+        })
+
+    </script>
+
+    <button id="btnAutomatico">Automatico</button>
+
+    <script type="text/javascript">
+
+        $("#btnAutomatico").click(function () {
+            if ($("#texto").css("display")=="none") {
+                
+                    $("#texto").fadeIn("slow");
+                
+            } else {
+                
+                    $("#texto").fadeOut("slow");
+                
+            }
+        })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

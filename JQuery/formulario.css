@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#formulario{
+    width: 550px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: mediumblue;
+}
+
+input{
+    height: 30px;
+    padding: 5px 5px;
+    font-size: 15px;
+    border-radius: 15px;
+    border-style: solid 5px grey;
+    width: 320px;
+}
+
+label{
+    position: relative;
+    width: 200px;
+    float: left;
+    margin-top: 10px;
+}
+
+.elemento-formulario{
+    margin-bottom: 10px;
+}
+
+#botonEnviar{
+    margin-left: 220px;
+    top: 50px;
+    background-color: rebeccapurple;
+    color: peachpuff;
+    font-style: inherit;
+    font-size: 15px;
+    width: 180px;
+}
+
+#mensajeErrorCampos{
+    color: red;
+    font-size: 110% !important;
+}

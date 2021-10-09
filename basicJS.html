@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <p id="primerTexto">
+        Bienvenido, Funciona!!.
+    </p>
+    <button id="miBoton">Bienvenido</button>
+
+    <script type="text/javascript">
+        document.getElementById("miBoton").onclick = function () {
+            document.getElementById("primerTexto").innerHTML = "Diplomado UAEMex";
+        }
+    </script>
+
+    <hr>
+    </hr>
+    <p id="segundoTexto">Este curso es: </p>
+    <button id="agregarTexto">Agregar Texto</button>
+    <script type="text/javascript">
+        document.getElementById("agregarTexto").onclick = function () {
+            var msg = document.getElementById("segundoTexto").innerHTML;
+            document.getElementById("segundoTexto").innerHTML = msg + "facil";
+        }
+    </script>
+
+    <hr>
+    </hr>
+
+    <p id="parrafoVacio"></p>
+    <button id="textoDesdeJS">Texto desde JS</button>
+    <script type="text/javascript">
+        document.getElementById("textoDesdeJS").onclick = function(){
+            document.getElementById("parrafoVacio").innerHTML = "<h1>Texto Generado</h1>";
+        }
+    </script>
+
+    <hr>
+    <h2>Cambiando estilos desde JS</h2>
+    <p id="parrafoConEstilos">Parrafo con estilo</p>
+    <button id="cambiarEstilo" >Cambiar Estilo</button>
+    <script type="text/javascript" >
+    document.getElementById("cambiarEstilo").onclick = function(){
+        document.getElementById("parrafoConEstilos").style.color = "red";
+        document.getElementById("parrafoConEstilos").style.fontSize = "50px";
+    }
+
+    </script>
+
+    <hr>
+    <p id="parrafoBienvenida"></p>
+    <button id="btnSaludo" >Saludo</button>
+    <script type="text/javascript" >
+    document.getElementById("btnSaludo").onclick = function(){
+        document.getElementById("parrafoBienvenida").style.color = "blue";
+        document.getElementById("parrafoBienvenida").style.fontSize = "50px";
+        document.getElementById("parrafoBienvenida").innerText = "Bienvenido al curso de JS";
+    }
+    </script>
+
+    <input id="entradaUser" type="text" placeholder="Usuario" >
+    <button id="mostrarUser">Loggin</button>
+
+    <p id="parrafoLoggin" ></p>
+
+    <script type="text/javascript">
+    document.getElementById("mostrarUser").onclick = function(){
+        var entrada = document.getElementById("entradaUser").value;
+        document.getElementById("parrafoLoggin").innerHTML = "Bienvenido: " + entrada;
+    }
+
+    </script>
+
+
+</body>
+
+</html>
