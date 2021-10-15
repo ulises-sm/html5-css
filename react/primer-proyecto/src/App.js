@@ -2,6 +2,32 @@
 import "./styles/style.scss"
 import Curso from './Curso'
 import Banner from './Banner'
+import Formulario from "./Formulario"
+
+const cursos = [
+  {
+    "nombre": "Curso Desarrollo",
+    "image": "https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png",
+    "price": "1200",
+    "profesor": "Ulises",
+    "location": "Online"
+  },
+  {
+    "nombre": "Bases De datos",
+    "image": "https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png",
+    "price": "1500",
+    "profesor": "Fatima",
+    "location": "Online"
+  },
+  {
+    "nombre": "Curso Desarrollo",
+    "image": "https://www.uaemex.mx/images/logos/img_logo_uaem18-21.png",
+    "price": "1200",
+    "profesor": "Ulises",
+    "location": "Online"
+  }
+]
+
 const App = () => 
 <>
 
@@ -9,21 +35,10 @@ const App = () =>
 <div>Hola Mundo</div>
 <div className="ed-grid m-grid-3" >
 
-<Curso
-nombre = "Curso Desarrollo Web Desde Cero"
-curso = "Programacion"
-profesor = "Benito Samuel"
-price = "$ 1500 MXN"
-/>
-
-<Curso
-nombre = "Curso Desarrollo Java Desde Cero"
-curso = "Programacion"
-profesor = "Ulises"
-price = "$ 1000 MXN"
-/>
-<Curso/>
-
+{
+  // cursos.map(c=><Curso nombre={c.nombre} price={c.price} profedor={c.profesor}/>)
+}
+<Formulario/>
 </div>
 
 
