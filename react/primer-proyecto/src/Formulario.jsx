@@ -6,15 +6,22 @@ class Formulario extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            nombre : "",
+            nombre: "",
             correo: ""
         }
         this.cambiarNombre = this.cambiarNombre.bind(this)
+        this.cambiarCorreo = this.cambiarCorreo.bind(this)
     }
 
-    cambiarNombre(e){
+    cambiarNombre(e) {
         this.setState({
             nombre: e.target.value
+        })
+    }
+
+    cambiarCorreo(e) {
+        this.setState({
+            correo: e.target.value
         })
     }
 
@@ -28,17 +35,15 @@ class Formulario extends Component {
                         <label>Nombre </label>
                         <input type="text" onChange={
                             this.cambiarNombre
-                            }
-                         />
+                        }
+                        />
                     </div>
                     <div className="form_item">
                         <label>Email: </label>
                         <input type="email"
-                        onChange={
-                            e => this.setState({
-                                correo: e.target.value
-                            })
-                        }
+                            onChange={
+                                this.cambiarCorreo
+                            }
                         ></input>
                     </div>
                     <div className="form_item">
