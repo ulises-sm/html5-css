@@ -2,7 +2,9 @@
 import "./styles/style.scss"
 import Curso from './Curso'
 import Banner from './Banner'
+import { Switch } from "react-router"
 import Formulario from "./Formulario"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 
 const cursos = [
   {
@@ -28,20 +30,29 @@ const cursos = [
   }
 ]
 
-const App = () => 
-<>
+const App = () => (
+  <Router>
 
-<Banner/>
-<div>Hola Mundo</div>
-<div className="ed-grid m-grid-3" >
+    <Switch>
+      <Route path="/" exact component={Banner} />
+      <Router path="/cursos" exact component={Curso} />
+      <Router path="/formulario" exact component={Formulario} />
+      <Route component={
+() => (
+  <div className="ed-grid">
+<h1>Error 404</h1>
+<span>Web Page not found!!</span>
+  </div>
+)
+      } />
+    </Switch>
 
-{
-  // cursos.map(c=><Curso nombre={c.nombre} price={c.price} profedor={c.profesor}/>)
-}
-<Formulario/>
-</div>
+    </Router>
+
+    )
 
 
-</>
 
-export default App;
+
+
+    export default App;
